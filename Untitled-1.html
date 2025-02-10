@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-6">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        /* Grille principale */
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(18, 1fr);
+            gap: 3px;
+        }
+
+        /* Positionnement des divs spécifiques */
+        .div2 {
+            grid-column: span 3 / span 3;
+            grid-column-start: 4;
+        }
+
+        .div3 {
+            grid-column: span 1 / span 1;
+            grid-row: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 3;
+        }
+
+        .div5 {
+            grid-column: span 1 / span 1;
+            grid-row: span 2 / span 2;
+            grid-column-start: 4;
+            grid-row-start: 2;
+        }
+
+        .div6 {
+            grid-column: span 1 / span 1;
+            grid-row: span 2 / span 2;
+            grid-column-start:3;
+            grid-row-start: 6;
+        }
+
+        .div7 {
+            grid-column: span 1 / span 1;
+            grid-row: span 2 / span 2;
+            grid-column-start: 6;
+            grid-row-start: 5;
+        }
+
+        .div8 {
+            grid-column: span 2 / span 2;
+            grid-row: span 1 / span 1;
+            grid-column-start: 4;
+            grid-row-start: 5;
+        }
+
+        .div9 {
+            grid-column: span 2 / span 2;
+            grid-row: span 1 / span 1;
+            grid-column-start: 2;
+            grid-row-start: 4;
+        }
+
+        .div10, .div11, .div12, .div13, .div14, .div15, .div16 {
+            grid-column-start: 2;
+        }
+
+        .div10 { grid-row-start: 11; }
+        .div11 { grid-row-start: 12; }
+        .div12 { grid-row-start: 13; }
+        .div13 { grid-row-start: 14; }
+        .div14 { grid-row-start: 15; }
+        .div15 { grid-row-start: 16; }
+        .div16 { grid-row-start: 17; }
+
+        .div17, .div18, .div19, .div20, .div21, .div22, .div23 {
+            grid-column: span 2 / span 2;
+            grid-column-start: 4;
+        }
+
+        .div17 { grid-row-start: 11; }
+        .div18 { grid-row-start: 12; }
+        .div19 { grid-row-start: 13; }
+        .div20 { grid-row-start: 14; }
+        .div21 { grid-row-start: 15; }
+        .div22 { grid-row-start: 16; }
+        .div23 { grid-row-start: 17; }
+
+        /* Style générique pour chaque div */
+        .parent div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Style pour les images dans les divs */
+        .parent img {
+            max-width: 300px;
+            max-height: 380px;
+        }
+
+        /* Style pour les divs contenant du texte */
+        .text {
+            font-size: 85px;
+            font-weight: bold;
+            text-align: center right;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <!-- Div 1 avec une image de taille spécifique -->
+        <div class="div1">
+            <img src="icone menu.png" style="width:30px; height:31px;" alt="Menu">
+        </div>
+
+        <!-- Div 2 avec des icônes de tailles spécifiques -->
+        <div class="div2">
+            <img src="icone profil.png" style="width:25px; height:26px;" alt="Icone profil">
+            <img src="icone favoris .png" style="width:30px; height:27px;" alt="Icone favoris">
+            <img src="icone partage.png" style="width:25px; height:26px;" alt="Icone partage">
+        </div>
+
+        <!-- Divs contenant des images de taille uniforme -->
+        <div class="div3"><img src="image1.jpg" alt="Image 3"></div>
+        <div class="div5"><img src="image5.jpg" alt="Image 5"></div>
+        <div class="div6"><img src="image2.jpg" alt="Image 6"></div>
+        <div class="div7"><img src="image4.jpg" alt="Image 7"></div>
+
+        <!-- Divs contenant du texte -->
+        <div class="div8">
+            <div class="text">your rules</div>
+        </div>
+        <div class="div9">
+            <div class="text">your beauty</div>
+        </div>
+
+        <!-- Divs 10 à 23 -->
+        <div class="div10"><img src="image6.jpg" alt="Image 6"></div>
+        <div class="div11"><img src="image7.jpg" alt="Image 7"></div>
+        <div class="div12"><img src="image8.jpg" alt="Image 8"></div>
+        <div class="div13"><img src="image9.jpg" alt="Image 9"></div>
+        <div class="div14"><img src="image10.jpg" alt="Image 10"></div>
+        <div class="div15"><img src="image3.jpg" alt="Image 3"></div>
+        <div class="div16"><img src="image11.jpg" alt="Image 11"></div>
+        <div class="div17">Lips</div>
+        <div class="div18">Complexion</div>
+        <div class="div19">Eyes</div>
+        <div class="div20">Base/Finish</div>
+        <div class="div21">Colorimetry</div>
+        <div class="div22">Type Makeup</div>
+        <div class="div23">Tips</div>
+    </div>
+</body>
+</html>
+

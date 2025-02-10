@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        :root {
+            --image-size: 150px;
+            --text-size: 16px;
+            --text-color: #333;
+            --text-font: Arial, serif;
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(30, 1fr);
+            gap: 8px;
+        }
+
+        .div1, .div2, .div3, .div5, .div6, .div7, .div8, .div9, .image-text-pair {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        .image-text-pair {
+            display: flex;
+            align-items: center;
+            grid-column: span 4 / span 4;
+            padding: 10px;
+        }
+
+        .image-text-pair img {
+            width: var(--image-size);
+            height: var(--image-size);
+            object-fit: cover;
+            margin-left: 10px;
+        }
+
+        .image-text-pair .text {
+            font-size: var(--text-size);
+            color: var(--text-color);
+            font-family: var(--text-font);
+            text-align: left;
+        }
+
+        .div2 {
+            grid-column: span 2 / span 2;
+            grid-column-start: 7;
+        }
+
+        .div3 {
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 1;
+            grid-row-start: 3;
+        }
+
+        .div5 {
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 5;
+            grid-row-start: 2;
+        }
+
+        .div6 {
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 2;
+            grid-row-start: 6;
+        }
+
+        .div7 {
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 7;
+            grid-row-start: 6;
+        }
+
+        .div8 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-column-start: 5;
+            grid-row-start: 6;
+        }
+
+        .div9 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+            grid-row-start: 3;
+        }
+
+        /* Placement des nouvelles paires texte + image */
+        .image-text-pair:nth-child(n+10) {
+            grid-column: span 4 / span 4;
+            grid-row: span 2 / span 2;
+            grid-column-start: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="div1">
+            <img src="icone menu.png" style="width:30px; height:31px;" alt="Menu">
+        </div>
+
+        <div class="div2">
+            <img src="icone profil.png" style="width:25px; height:26px;" alt="Icone profil">
+            <img src="icone favoris.png" style="width:30px; height:27px;" alt="Icone favoris">
+            <img src="icone partage.png" style="width:25px; height:26px;" alt="Icone partage">
+        </div>
+
+        <div class="div3"><img src="image1.jpg" alt="Image 3"></div>
+        <div class="div5"><img src="image5.jpg" alt="Image 5"></div>
+        <div class="div6"><img src="image2.jpg" alt="Image 6"></div>
+        <div class="div7"><img src="image4.jpg" alt="Image 7"></div>
+
+        <div class="div8">
+            <div class="text">your rules</div>
+        </div>
+        <div class="div9">
+            <div class="text">your beauty</div>
+        </div>
+
+        <!-- 7 nouvelles images avec leur texte -->
+        <div class="image-text-pair">
+            <div class="text">Text 1</div>
+            <img src="imageA.jpg" alt="Image A">
+        </div>
+        <div class="image-text-pair">
+            <div class="text">Text 2</div>
+            <img src="imageB.jpg" alt="Image B">
+        </div>
+        <div class="image-text-pair">
+            <div class="text">Text 3</div>
+            <img src="imageC.jpg" alt="Image C">
+        </div>
+        <div class="image-text-pair">
+            <div class="text">Text 4</div>
+            <img src="imageD.jpg" alt="Image D">
+        </div>
+        <div class="image-text-pair">
+            <div class="text">Text 5</div>
+            <img src="imageE.jpg" alt="Image E">
+        </div>
+        <div class="image-text-pair">
+            <div class="text">Text 6</div>
+            <img src="imageF.jpg" alt="Image F">
+        </div>
+        <div class="image-text-pair">
+            <div class="text">Text 7</div>
+            <img src="imageG.jpg" alt="Image G">
+        </div>
+    </div>
+</body>
+</html>
+

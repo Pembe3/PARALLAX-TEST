@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Grid Layout</title>
+    <style>
+        /* Variables CSS */
+        :root {
+            --image-size: 150px;
+            --text-size: 16px;
+            --text-color: #333;
+            --text-font: Arial, serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--text-font);
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(20, 1fr);
+            gap: 10px;
+        }
+
+        /* Styles pour HTML 2 */
+        .html2-div1 { grid-area: 1 / 1 / 2 / 2; }
+        .html2-div2 { grid-area: 1 / 7 / 2 / 9; }
+        .html2-div3 { grid-area: 2 / 1 / 5 / 3; }
+        .html2-div5 { grid-area: 3 / 5 / 6 / 7; }
+        .html2-div6 { grid-area: 6 / 2 / 9 / 4; }
+        .html2-div7 { grid-area: 6 / 7 / 9 / 9; }
+        .html2-div8 { grid-area: 9 / 5 / 11 / 7; }
+        .html2-div9 { grid-area: 9 / 3 / 11 / 5; }
+
+        /* Styles pour HTML 1 */
+        .html1-div1 { grid-area: 11 / 2 / 12 / 3; }
+        .html1-div2 { grid-area: 12 / 2 / 13 / 3; }
+        .html1-div3 { grid-area: 13 / 2 / 14 / 3; }
+        .html1-div4 { grid-area: 14 / 2 / 15 / 3; }
+        .html1-div5 { grid-area: 15 / 2 / 16 / 3; }
+        .html1-div6 { grid-area: 16 / 2 / 17 / 3; }
+        .html1-div7 { grid-area: 17 / 2 / 18 / 3; }
+        .html1-div8 { grid-area: 11 / 5 / 12 / 8; }
+        .html1-div9 { grid-area: 12 / 5 / 13 / 8; }
+        .html1-div10 { grid-area: 13 / 5 / 14 / 8; }
+        .html1-div11 { grid-area: 14 / 5 / 15 / 8; }
+        .html1-div12 { grid-area: 15 / 5 / 16 / 8; }
+        .html1-div13 { grid-area: 16 / 5 / 17 / 8; }
+        .html1-div14 { grid-area: 17 / 5 / 18 / 8; }
+        
+        /* Style commun */
+        .parent div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            font-size: var(--text-size);
+            color: var(--text-color);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <!-- HTML 2 -->
+        <div class="html2-div1"><img src="icone menu.png" alt="Menu"></div>
+        <div class="html2-div2">
+            <img src="icone profil.png" alt="Profil">
+            <img src="icone favoris .png" alt="Favoris">
+            <img src="icone partage.png" alt="Partage">
+        </div>
+        <div class="html2-div3"><img src="image1.jpg" alt="Image 1"></div>
+        <div class="html2-div5"><img src="image5.jpg" alt="Image 5"></div>
+        <div class="html2-div6"><img src="image2.jpg" alt="Image 2"></div>
+        <div class="html2-div7"><img src="image4.jpg" alt="Image 4"></div>
+        <div class="html2-div8"><div class="text">Your Rules</div></div>
+        <div class="html2-div9"><div class="text">Your Beauty</div></div>
+
+        <!-- HTML 1 -->
+        <div class="html1-div1"><img src="image6.jpg" alt="Image 6"></div>
+        <div class="html1-div2"><img src="image7.jpg" alt="Image 7"></div>
+        <div class="html1-div3"><img src="image8.jpg" alt="Image 8"></div>
+        <div class="html1-div4"><img src="image9.jpg" alt="Image 9"></div>
+        <div class="html1-div5"><img src="image10.jpg" alt="Image 10"></div>
+        <div class="html1-div6"><img src="image3.jpg" alt="Image 3"></div>
+        <div class="html1-div7"><img src="image11.jpg" alt="Image 11"></div>
+        <div class="html1-div8">Lips</div>
+        <div class="html1-div9">Complexion</div>
+        <div class="html1-div10">Eyes</div>
+        <div class="html1-div11">Base/Finish</div>
+        <div class="html1-div12">Colorimetry</div>
+        <div class="html1-div13">Type Makeup</div>
+        <div class="html1-div14">Tips</div>
+    </div>
+</body>
+</html>

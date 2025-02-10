@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        /* Variables CSS pour réglages */
+        :root {
+            --image-size: 150px; /* Taille uniforme des images */
+            --text-size: 16px; /* Taille du texte */
+            --text-color: #333; /* Couleur du texte */
+            --text-font: Arial, serif; /* Police du texte */
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(20, 1fr);
+            gap: 8px;
+        }
+
+        .div1,
+        .div2,
+        .div3,
+        .div5,
+        .div6,
+        .div7,
+        .div8,
+        .div9 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+        }
+
+        .div1, .div2 {
+            /* Les divs 1 et 2 conservent des tailles d'images spécifiques */
+            padding: 10px; /* Un peu d'espace autour des icônes */
+        }
+
+        .div3, .div5, .div6, .div7 {
+            /* Images de taille uniforme dans ces divs */
+            width: var(--image-size);
+            height: var(--image-size);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            font-size: var(--text-size);
+            color: var(--text-color);
+            font-family: var(--text-font);
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        /* Style spécifique pour les divs contenant du texte (div8 et div9) */
+        .div8, .div9 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        .div8 .text, .div9 .text {
+            font-size: var(--text-size);
+            color: var(--text-color);
+            font-family: var(--text-font);
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        /* Spécifications pour la disposition du grid */
+        .div2 {
+            grid-column: span 2 / span 2;
+            grid-column-start: 7;
+        }
+
+        .div3 {
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 1;
+            grid-row-start: 3;
+        }
+
+        .div5 {
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 5;
+            grid-row-start: 2;
+        }
+
+        .div6 {
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 2;
+            grid-row-start: 6;
+        }
+
+        .div7 {
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 7;
+            grid-row-start: 6;
+        }
+
+        .div8 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-column-start: 5;
+            grid-row-start: 6;
+        }
+
+        .div9 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+            grid-row-start: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <!-- Div 1 avec une image de taille spécifique -->
+        <div class="div1">
+            <img src="icone menu.png" style="width:30px; height:31px;" alt="Menu">
+        </div>
+
+        <!-- Div 2 avec des icônes de tailles spécifiques -->
+        <div class="div2">
+            <img src="icone profil.png" style="width:25px; height:26px;" alt="Icone profil">
+            <img src="icone favoris .png" style="width:30px; height:27px;" alt="Icone favoris">
+            <img src="icone partage.png" style="width:25px; height:26px;" alt="Icone partage">
+        </div>
+
+        <!-- Divs contenant des images de taille uniforme -->
+        <div class="div3"><img src="image1.jpg" alt="Image 3"></div>
+        <div class="div5"><img src="image5.jpg" alt="Image 5"></div>
+        <div class="div6"><img src="image2.jpg" alt="Image 6"></div>
+        <div class="div7"><img src="image4.jpg" alt="Image 7"></div>
+
+        <!-- Divs contenant du texte -->
+        <div class="div8">
+            <div class="text">your rules</div>
+        </div>
+        <div class="div9">
+            <div class="text">your beauty</div>
+        </div>
+    </div>
+</body>
+</html>

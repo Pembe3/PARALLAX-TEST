@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty UI Grid</title>
+    <style>
+        /* Style général de la page */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Empêche le défilement horizontal */
+        }
+
+        /* Effet de parallaxe */
+        .parallax {
+            position: relative;
+            width: 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+        }
+
+        /* Grid Layout de la page 1 */
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 20px;
+            padding: 20px;
+            z-index: 1; /* Assurez-vous que le grid est au-dessus de l'image */
+        }
+
+        .div1 { grid-area: 2 / 2 / 3 / 3; }
+        .div2 { grid-area: 3 / 2 / 4 / 3; }
+        .div3 { grid-area: 4 / 2 / 5 / 3; }
+        .div4 { grid-area: 5 / 2 / 6 / 3; }
+        .div5 { grid-area: 6 / 2 / 7 / 3; }
+        .div6 { grid-area: 7 / 2 / 8 / 3; }
+        .div7 { grid-area: 8 / 2 / 9 / 3; }
+        .div8 { grid-area: 2 / 5 / 3 / 8; }
+        .div9 { grid-area: 3 / 5 / 4 / 8; }
+        .div10 { grid-area: 4 / 5 / 5 / 8; }
+        .div11 { grid-area: 5 / 5 / 6 / 8; }
+        .div12 { grid-area: 6 / 5 / 7 / 8; }
+        .div13 { grid-area: 7 / 5 / 8 / 8; }
+        .div14 { grid-area: 8 / 5 / 9 / 8; }
+        .div15 { grid-area: 1 / 1 / 2 / 2; }
+        .div16 { grid-area: 1 / 8 / 2 / 9; }
+
+        /* Style pour les images */
+        .parent div img {
+            width: 187px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        /* Style pour le texte */
+        .div8, .div9, .div10, .div11, .div12, .div13, .div14 {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: right;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        /* Style pour le menu et les icônes */
+        .menu-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-icons img {
+            width: 30px;
+            height: 31px;
+        }
+
+        .menu-icons .icon {
+            width: 25px;
+            height: 26px;
+        }
+
+        /* Page 2 (section de défilement) */
+        .page2 {
+            background-color: #f4f4f4;
+            padding: 50px;
+            z-index: 1;
+        }
+
+        .page2 img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Divisions spécifiques dans la page 2 */
+        .page2 .text {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 avec parallaxe -->
+    <div class="parallax" style="background-image: url('background-image.jpg');">
+        <div class="parent">
+            <!-- Images -->
+            <div class="div1"><img src="image6.jpg" alt="Image 6"></div>
+            <div class="div2"><img src="image7.jpg" alt="Image 7"></div>
+            <div class="div3"><img src="image8.jpg" alt="Image 8"></div>
+            <div class="div4"><img src="image9.jpg" alt="Image 9"></div>
+            <div class="div5"><img src="image10.jpg" alt="Image 10"></div>
+            <div class="div6"><img src="image3.jpg" alt="Image 3"></div>
+            <div class="div7"><img src="image11.jpg" alt="Image 11"></div>
+        
+            <!-- Texte -->
+            <div class="div8">Lips</div>
+            <div class="div9">Complexion</div>
+            <div class="div10">Eyes</div>
+            <div class="div11">Base/Finish</div>
+            <div class="div12">Colorimetry</div>
+            <div class="div13">Type Makeup</div>
+            <div class="div14">Tips</div>
+        
+            <!-- Menu et Icons -->
+            <div class="div15"><img src="icone menu.png" alt="Menu"></div>
+            <div class="div16 menu-icons">
+                <img src="icone profil.png" class="icon" alt="Icone profil">
+                <img src="icone favoris .png" class="icon" alt="Icone favoris">
+                <img src="icone partage.png" class="icon" alt="Icone partage">
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2 (Section de défilement) -->
+    <div class="page2">
+        <div class="text">Beauty Page 2</div>
+        <img src="image2.jpg" alt="Beauty Image">
+        <div class="text">Your Style Guide</div>
+        <img src="image4.jpg" alt="Beauty Image">
+    </div>
+</body>
+</html>
